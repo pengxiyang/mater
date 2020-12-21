@@ -4,15 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
     tools:context=".MainActivity">
-
-    <TextView
+<!--    layout_constraintBottom_toTopOf-->
+<!--    layout_constraintBottom_toBottomOf-->
+<!--    layout_constraintBaseline_toBaselineOf-->
+<!--    layout_constraintStart_toEndOf-->
+<!--    layout_constraintStart_toStartOf-->
+<!--    layout_constraintEnd_toStartOf-->
+<!--    layout_constraintEnd_toEndOf-->
+<!--该控件的哪侧位于其他控件的哪侧-->
+    <Button
+        android:id="@+id/bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="创建数据库"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+<!--    文本基线，文本对齐-->
+    <Button
+        android:id="@+id/add_bt"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bt"
+        android:layout_marginLeft="20dp"
+        android:text="添加数据"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt"
+        android:layout_height="40dp"/>
+
+<!--    角度定位 可以用一个角度和一个距离来约束两个空间的中心-->
+    <Button
+        android:id="@+id/query_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt"
+        app:layout_constraintCircle="@id/bt"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="查询"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
