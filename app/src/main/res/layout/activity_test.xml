@@ -16,47 +16,38 @@
     <!--该控件的哪侧位于其他控件的哪侧-->
     <!--    把TextView1的左边和上边约束到parent的左边和上边-->
     <!--    居中和偏移-->
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="19sp"
+        android:text="0"
+        />
+
     <Button
         android:id="@+id/bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="创建数据库"
+        app:layout_constraintTop_toBottomOf="@id/tv"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    文本基线，文本对齐-->
+        android:text="点击"
+        android:layout_marginTop="30dp"
+        />
     <Button
-        android:id="@+id/add_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:text="添加数据"
-        app:layout_constraintBaseline_toBaselineOf="@id/bt"
-        app:layout_constraintLeft_toRightOf="@id/bt" />
-
-    <!--    角度定位 可以用一个角度和一个距离来约束两个空间的中心-->
-    <Button
-        android:id="@+id/query_bt"
+        android:id="@+id/bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="查询"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintCircle="@id/bt"
-        app:layout_constraintCircleAngle="120"
-        app:layout_constraintCircleRadius="100dp"
-        app:layout_constraintTop_toBottomOf="@id/bt" />
-<!--    layout_constraintHorizontal_bias 水平偏移-->
-<!--    layout_constraintVertical_bias 垂直偏移-->
-    <Button
-        android:id="@+id/update_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/query_bt"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintTop_toBottomOf="@id/bt"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:text="修改"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="jump"
         />
 
 

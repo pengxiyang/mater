@@ -17,7 +17,6 @@ class MyDatabaseHelper(val context: Context, name: String, version: Int) :
             "author text," +
             "price real," +
             "pages integer," +
-
             "name text)"
     private val createCategory = "create table Category (" +
             "id integer primary key autoincrement," +
