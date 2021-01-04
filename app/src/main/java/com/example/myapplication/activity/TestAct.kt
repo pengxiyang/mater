@@ -38,7 +38,6 @@ class TestAct : AppCompatActivity() {
         }
     }
 
-
     fun refreshPage(){
         tv.text =viewmodel.counter.toString()
     }

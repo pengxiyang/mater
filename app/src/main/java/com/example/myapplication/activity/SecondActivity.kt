@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
+import com.example.myapplication.lifecycle.MyObserver
 
 class SecondActivity:AppCompatActivity(){
     var  TAG ="----ASecondActivity"
@@ -12,6 +13,7 @@ class SecondActivity:AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.e(TAG, "onCreate: " )
+        lifecycle.addObserver(MyObserver(lifecycle))
     }
 
     override fun onStart() {
